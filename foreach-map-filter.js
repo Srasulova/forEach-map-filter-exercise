@@ -45,7 +45,16 @@ Examples:
     showFirstAndLast(['hi', 'goodbye', 'smile']) // ['hi', 'ge', 'se']
 
 */
-function showFirstAndLast(arr) {}
+function showFirstAndLast(arr) {
+  let newArr = [];
+  arr.forEach((val) => {
+    newArr.push(val.charAt(0) + val.charAt(val.length - 1));
+  });
+  return newArr;
+}
+
+console.log(showFirstAndLast(["colt", "matt", "tim", "test"]));
+console.log(showFirstAndLast(["hi", "goodbye", "smile"]));
 
 /*
 Write a function called addKeyAndValue which accepts an array of objects, a key, and a value and returns the array passed to the function with the new key and value added for each object 
