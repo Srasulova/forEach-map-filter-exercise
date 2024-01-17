@@ -254,4 +254,8 @@ Examples:
     doubleOddNumbers([4,4,4,4,4]) // []
 */
 
-function doubleOddNumbers(arr) {}
+function doubleOddNumbers(arr) {
+  return arr.filter((val) => val % 2 === 1).map((val) => val * 2);
+}
+
+console.log(doubleOddNumbers([1, 2, 3, 4, 5]));
