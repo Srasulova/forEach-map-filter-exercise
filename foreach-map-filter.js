@@ -209,7 +209,22 @@ Examples:
     findInObj([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia", isCatOwner: true}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele", isCatOwner: true}], 'isCatOwner',true) // {first: 'Tim', last:"Garcia", isCatOwner: true}
 */
 
-function findInObj(arr, key, searchValue) {}
+function findInObj(arr, key, searchValue) {
+  return arr.filter((val) => val[key] === searchValue)[0];
+}
+
+console.log(
+  findInObj(
+    [
+      { first: "Elie", last: "Schoppik" },
+      { first: "Tim", last: "Garcia", isCatOwner: true },
+      { first: "Matt", last: "Lane" },
+      { first: "Colt", last: "Steele", isCatOwner: true },
+    ],
+    "isCatOwner",
+    true
+  )
+);
 
 /*
 Write a function called removeVowels which accepts a string and returns a new string with all of the vowels (both uppercased and lowercased) removed. Every character in the new string should be lowercased.
